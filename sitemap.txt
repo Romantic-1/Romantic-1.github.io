@@ -1,2 +1,6 @@
+http://example.com/2025/04/24/My-New-Post/
 http://example.com/2025/04/24/hello-world/
 http://example.com/
+http://example.com/tags/PS3/
+http://example.com/tags/Games/
+http://example.com/categories/Diary/

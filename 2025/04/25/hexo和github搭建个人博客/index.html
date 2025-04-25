@@ -176,7 +176,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/note/" style="color: #ffa2c4">
+                <a href="/tags/note/" style="color: #03a9f4">
                     note
                 </a>
             </span>
@@ -200,7 +200,7 @@ git config --global user.email &quot;2751587017@qq.com&quot;
 <p>然后创建ssh密钥：<br>输入 ssh-keygen -t rsa -C “GitHub 邮箱”，然后一路回车。</p>
 <pre><code>ssh-keygen -t rsa -C &quot;2751587017@qq.com&quot;
 </code></pre>
-<p>此时在电脑本地就会生成密钥和公钥，将公钥打开复制<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155748862.png"><br>然后到个人GitHub网站保存这个公钥<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155814089.png"><br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155842398.png"><br><strong>验证链接</strong><br>打开git-bash，输入命令：ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;">&#103;&#x69;&#x74;&#64;&#103;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;</a><br>会提示输入yes，回车，出现successful则表示链接成功<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155921415.png"><br>如果出现连接失败，输入命令查看链接过程：<br>ssh -vT <a href="mailto:&#x67;&#x69;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#x69;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a><br>如果出现的是127.0.0.1失败<br>表示dns解析出现了问题<br><strong>解决办法：</strong><br>参考链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7103738143513247781">https://juejin.cn/post/7103738143513247781</a><br>我使用的是steam++加速器，在加速之前，编辑hosts文件，添加以下内容到末尾</p>
+<p>此时在电脑本地就会生成密钥和公钥，将公钥打开复制<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155748862.png"><br>然后到个人GitHub网站保存这个公钥<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155814089.png"><br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155842398.png"><br><strong>验证链接</strong><br>打开git-bash，输入命令：ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;</a><br>会提示输入yes，回车，出现successful则表示链接成功<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155921415.png"><br>如果出现连接失败，输入命令查看链接过程：<br>ssh -vT <a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#x6d;</a><br>如果出现的是127.0.0.1失败<br>表示dns解析出现了问题<br><strong>解决办法：</strong><br>参考链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7103738143513247781">https://juejin.cn/post/7103738143513247781</a><br>我使用的是steam++加速器，在加速之前，编辑hosts文件，添加以下内容到末尾</p>
 <pre><code>20.205.243.166  github.com
 20.205.243.160  ssh.github.com
 </code></pre>

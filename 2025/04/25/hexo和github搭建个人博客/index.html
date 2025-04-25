@@ -175,37 +175,52 @@
 <h2 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h2><p><a target="_blank" rel="noopener" href="https://note.youdao.com/s/1sXuK0lP">https://note.youdao.com/s/1sXuK0lP</a></p>
 <h2 id="2-安装node-js环境‘"><a href="#2-安装node-js环境‘" class="headerlink" title="2.安装node.js环境‘"></a>2.安装node.js环境‘</h2><p><a target="_blank" rel="noopener" href="https://note.youdao.com/s/ZVRPmaav">https://note.youdao.com/s/ZVRPmaav</a></p>
 <h2 id="3-链接github"><a href="#3-链接github" class="headerlink" title="3.链接github"></a>3.链接github</h2><p>右键打开git-bash<br>然后输入命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;GitHub 用户名&quot;</span><br><span class="line">git config --global user.email &quot;GitHub 邮箱&quot;</span><br></pre></td></tr></table></figure>
-
+<pre><code>git config --global user.name &quot;GitHub 用户名&quot;
+git config --global user.email &quot;GitHub 邮箱&quot;
+</code></pre>
 <p>我的是这样的：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Romantic-1&quot;</span><br><span class="line">git config --global user.email &quot;2751587017@qq.com&quot;</span><br></pre></td></tr></table></figure>
+<pre><code>git config --global user.name &quot;Romantic-1&quot;
+git config --global user.email &quot;2751587017@qq.com&quot;
+</code></pre>
 <p>然后创建ssh密钥：<br>输入 ssh-keygen -t rsa -C “GitHub 邮箱”，然后一路回车。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;2751587017@qq.com&quot;</span><br></pre></td></tr></table></figure>
-<p>此时在电脑本地就会生成密钥和公钥，将公钥打开复制<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155748862.png"><br>然后到个人GitHub网站保存这个公钥<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155814089.png"><br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155842398.png"><br><strong>验证链接</strong><br>打开git-bash，输入命令：ssh -T <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a><br>会提示输入yes，回车，出现successful则表示链接成功<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155921415.png"><br>如果出现连接失败，输入命令查看链接过程：<br>ssh -vT <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a><br>如果出现的是127.0.0.1失败<br>表示dns解析出现了问题<br><strong>解决办法：</strong><br>参考链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7103738143513247781">https://juejin.cn/post/7103738143513247781</a><br>我使用的是steam++加速器，在加速之前，编辑hosts文件，添加以下内容到末尾</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">20.205.243.166  github.com</span><br><span class="line">20.205.243.160  ssh.github.com</span><br></pre></td></tr></table></figure>
+<pre><code>ssh-keygen -t rsa -C &quot;2751587017@qq.com&quot;
+</code></pre>
+<p>此时在电脑本地就会生成密钥和公钥，将公钥打开复制<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155748862.png"><br>然后到个人GitHub网站保存这个公钥<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155814089.png"><br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155842398.png"><br><strong>验证链接</strong><br>打开git-bash，输入命令：ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a><br>会提示输入yes，回车，出现successful则表示链接成功<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155921415.png"><br>如果出现连接失败，输入命令查看链接过程：<br>ssh -vT <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#x6f;&#x6d;</a><br>如果出现的是127.0.0.1失败<br>表示dns解析出现了问题<br><strong>解决办法：</strong><br>参考链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7103738143513247781">https://juejin.cn/post/7103738143513247781</a><br>我使用的是steam++加速器，在加速之前，编辑hosts文件，添加以下内容到末尾</p>
+<pre><code>20.205.243.166  github.com
+20.205.243.160  ssh.github.com
+</code></pre>
 <p><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425160111697.png"></p>
 <h2 id="3a-创建-Github-Pages-仓库"><a href="#3a-创建-Github-Pages-仓库" class="headerlink" title="3a.创建 Github Pages 仓库"></a>3a.创建 Github Pages 仓库</h2><p>GitHub 主页右上角加号 -&gt; New repository：</p>
 <p>Repository name 中输入 用户名.github.io<br>勾选 “Initialize this repository with a README”<br>Description 选填<br>填好后点击 Create repository 创建。<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425160202783.png"></p>
 <h2 id="5-本地环境安装hexo"><a href="#5-本地环境安装hexo" class="headerlink" title="5.本地环境安装hexo"></a>5.本地环境安装hexo</h2><p>新建一个文件夹用来存放 Hexo 的程序文件，如 Hexo-Blog。打开该文件夹，右键 -&gt; Git Bash Here。<br>使用 npm 一键安装 Hexo 博客程序：<br>npm install -g hexo-cli<br>这个命令也可以：<br>npm install -g hexo #开始安装hexo<br>创建存放博客的目录#初始化创建 test 文件夹<br>hexo init test<br>进入test目录<br>cd test<br>然后安装hexo所需的文件<br>npm install<br>然后生成静态网页<br>hexo generate<br>然后启动本地服务<br>hexo server 或者hexo server -p 80<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425160255371.png"><br>此时可以查看localhost:4000到网页服务<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425160316627.png"></p>
 <h2 id="6-部署-Hexo-到-GitHub-Pages"><a href="#6-部署-Hexo-到-GitHub-Pages" class="headerlink" title="6.部署 Hexo 到 GitHub Pages"></a>6.部署 Hexo 到 GitHub Pages</h2><p>本地博客测试成功后，就是上传到 GitHub 进行部署，使其能够在网络上访问。</p>
 <p>首先安装 hexo-deployer-git：<br>在博客的目录中打开git-bash安装</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre>
 <p>然后修改博客目录中的 _config.yml 文件末尾的 Deployment 部分，修改成如下：<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425160400457.png"><br>完成后运行 hexo d 将网站上传部署到 GitHub Pages。<br>hexo deploy<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425160418478.png"><br>完成！这时访问我们的 GitHub 域名 https:&#x2F;&#x2F;用户名.github.io 就可以看到 Hexo 网站了。<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425160436125.png"></p>
 <h2 id="7-更换hexo主题"><a href="#7-更换hexo主题" class="headerlink" title="7.更换hexo主题"></a>7.更换hexo主题</h2><p>下载主题压缩包<br><a target="_blank" rel="noopener" href="https://hexo.io/themes">https://hexo.io/themes</a><br><a target="_blank" rel="noopener" href="https://blog.lixiaomu.fun/posts/43857/">https://blog.lixiaomu.fun/posts/43857/</a><br>把下载的主题解压，放到 C:\Users\你的用户名\test\themes 文件夹里面（博客目录文件夹里面），然后用编辑器 (如:Notepad++) 打开 \test_config.yml 文件。在里面找到 theme 修改成你的主题名称，必须和主题文件夹的名称一致。<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425160522740.png"></p>
 <p>然后需要清除缓存和重新生成</p>
 <p>hexo clean #清除缓存<br>hexo generate #生成静态网页</p>
 <p>然后再重新推送到github<br>hexo deploy</p>
 <p>此时可能会出现一个问题，更换主题后页面会显示下面这个提示</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extends includes/layout.pug block content #recent-posts.recent-posts include includes/recent-posts.pug include includes/pagination.pug </span><br></pre></td></tr></table></figure>
+<pre><code>extends includes/layout.pug block content     #recent-posts.recent-posts include includes/recent-posts.pug include includes/pagination.pug 
+</code></pre>
 <p>解决办法：<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137946156">https://zhuanlan.zhihu.com/p/137946156</a><br>1、在hexo目录下打开git bash，输入命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</span><br></pre></td></tr></table></figure>
-<p>2、然后清除缓存，重新生成，推送<br>hexo clean<br>hexo generate<br>hexo deploy</p>
+<pre><code>npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive
+</code></pre>
+<p>2、然后清除缓存，重新生成，推送</p>
+<pre><code>hexo clean
+hexo generate
+hexo deploy
+</code></pre>
 <h2 id="8-发布新文章"><a href="#8-发布新文章" class="headerlink" title="8.发布新文章"></a>8.发布新文章</h2><p>进入博客所在目录，右键打开 Git Bash Here，创建博文：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;My New Post&quot;</span><br></pre></td></tr></table></figure>
-
+<pre><code>hexo new &quot;My New Post&quot;
+</code></pre>
 <p>然后 source 文件夹中会出现一个 My New Post.md 文件，就可以使用 Markdown 编辑器在该文件中撰写文章了。</p>
 <p>写完后运行下面代码将文章渲染并部署到 GitHub Pages 上完成发布。以后每次发布文章都是这两条命令。</p>
-<p>hexo generate   # 生成页面<br>hexo deploy   # 部署发布</p>
+<pre><code>hexo generate   # 生成页面
+hexo deploy   # 部署发布
+</code></pre>
 <h2 id="9-博客网站设置"><a href="#9-博客网站设置" class="headerlink" title="9.博客网站设置"></a>9.博客网站设置</h2><p>包括网站名称、描述、作者、链接样式等，全部在网站目录下的 _config.yml 文件中，参考官方文档按需要编辑。<br>注意：冒号后要加一个空格！</p>
 <p>设置网站图标<br>进入 themes&#x2F;主题 文件夹，打开 _config.yml 配置文件，找到 favicon 修改，一般格式为：favicon: 图标地址。（不同主题可能略有差别）</p>
 <p>修改并部署后没有效果<br>使用 hexo clean 清理后重新部署。</p>

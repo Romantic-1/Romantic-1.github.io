@@ -13,7 +13,25 @@
   <url>
     <loc>https://romantic-1.github.io/2025/04/25/hexo%E5%92%8Cgithub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     
-    <lastmod>2025-04-25</lastmod>
+    <lastmod>2025-04-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://romantic-1.github.io/tags/index.html</loc>
+    
+    <lastmod>2025-04-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://romantic-1.github.io/categories/index.html</loc>
+    
+    <lastmod>2025-04-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -47,12 +65,19 @@
 
   
   <url>
-    <loc>https://romantic-1.github.io/tags/note/</loc>
+    <loc>https://romantic-1.github.io/tags/%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2025-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://romantic-1.github.io/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2025-04-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>

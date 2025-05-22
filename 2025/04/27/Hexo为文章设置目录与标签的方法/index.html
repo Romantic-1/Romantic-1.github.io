@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>我的第一个博客 | 我的笔记博客</title>
+    <title>Hexo为文章设置目录与标签的方法 | 我的笔记博客</title>
     <meta name="author" content="曾炜键" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -171,21 +171,79 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>我的第一个博客</h1>
+        <h1>Hexo为文章设置目录与标签的方法</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/4/24
+            2025/4/27
         </span>
         
+        <span class="category">
+            <a href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                搭建博客笔记
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86/" style="color: #03a9f4">
+                    扩展知识
+                </a>
+            </span>
+            
+        </span>
         
     </div>
     
     <div class="content" v-pre>
-        
+        <h1 id="Hexo为文章设置目录与标签的方法"><a href="#Hexo为文章设置目录与标签的方法" class="headerlink" title="Hexo为文章设置目录与标签的方法"></a>Hexo为文章设置目录与标签的方法</h1><hr>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44543463/article/details/119738094">https://blog.csdn.net/weixin_44543463/article/details/119738094</a></p>
+<h2 id="1-创建目录页"><a href="#1-创建目录页" class="headerlink" title="1. 创建目录页"></a>1. 创建目录页</h2><p>在网站根目录下执行以下代码。</p>
+<pre><code>hexo new page categories
+</code></pre>
+<p>Hexo\source 目录中会生成一个 categories文件夹，文件夹内有一个 index.md 文件，打开此文件，将其中的 type 修改为 categories 即可。</p>
+<pre><code>title: 分类
+date: 2021-08-16 10:27:28
+type: &quot;categories&quot;
+comments: false
+</code></pre>
+<h2 id="2-创建标签页"><a href="#2-创建标签页" class="headerlink" title="2. 创建标签页"></a>2. 创建标签页</h2><p>创建标签页与创建目录页方法相同。在网站根目录下执行以下代码。</p>
+<pre><code>hexo new page tags
+</code></pre>
+<p>Hexo\source 目录中会生成一个 tags文件夹，文件夹内也有一个 index.md 文件，打开此文件，将其中的 type 修改为 tags 即可。</p>
+<pre><code>title: 分类
+date: 2021-08-16 10:27:28
+type: &quot;tags&quot;
+comments: false
+</code></pre>
+<h2 id="3-为文章设置目录与标签"><a href="#3-为文章设置目录与标签" class="headerlink" title="3. 为文章设置目录与标签"></a>3. 为文章设置目录与标签</h2><p>在 Hexo\source_posts目录中创建.md文件即新建了一篇博客，在文章的开头部分添加如下代码</p>
+<pre><code>---
+title: 这里是文章的标题
+date: 这里是发表时间，如：2021-08-15 08:15:16
+description: 这里填写摘要。也可以把摘要这一段删去，在文章中想要截断的地方加入&lt;!--more--&gt;，这样在首页就只显示开头到截断的内容，而不会显示全文
+categories:
+- 分类
+- 子分类
+tags:
+- 标签1
+- 标签2
+---
+</code></pre>
+<p>结果截图如下：<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250427110625558.png"></p>
+
     </div>
     
     

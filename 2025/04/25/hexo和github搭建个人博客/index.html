@@ -68,13 +68,13 @@
         </a>
         
         <a href="/">
-            <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;Home</span>
+            <i class="fa-solid fa-主页 fa-fw"></i>
+            <span>&ensp;主页</span>
         </a>
         
         <a href="/about">
             <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;About</span>
+            <span>&ensp;关于我</span>
         </a>
         
         <a href="/archives">
@@ -84,12 +84,17 @@
         
         <a href="/categories">
             <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;Categories</span>
+            <span>&ensp;类别</span>
         </a>
         
         <a href="/tags">
             <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;Tags</span>
+            <span>&ensp;标签</span>
+        </a>
+        
+        <a href="/search">
+            <i class="fa-solid fa-search fa-fw"></i>
+            <span>&ensp;搜索</span>
         </a>
         
     </nav>
@@ -104,9 +109,9 @@
                 <a href="/">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-house fa-fw"></i>
+                            <i class="fa-solid fa-主页 fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">主页</div>
                     </div>
                 </a>
                 
@@ -115,7 +120,7 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-id-card fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于我</div>
                     </div>
                 </a>
                 
@@ -133,7 +138,7 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-bookmark fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">类别</div>
                     </div>
                 </a>
                 
@@ -142,7 +147,16 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+                <a href="/search">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-search fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">搜索</div>
                     </div>
                 </a>
                 
@@ -167,6 +181,15 @@
             2025/4/25
         </span>
         
+        <span class="category">
+            <a href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                搭建博客笔记
+            </a>
+        </span>
+        
         
         <span class="tags">
             <span class="icon">
@@ -176,8 +199,8 @@
             
             <span class="tag">
                 
-                <a href="/tags/note/" style="color: #00a596">
-                    note
+                <a href="/tags/%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86/" style="color: #ffa2c4">
+                    扩展知识
                 </a>
             </span>
             
@@ -200,7 +223,7 @@ git config --global user.email &quot;2751587017@qq.com&quot;
 <p>然后创建ssh密钥：<br>输入 ssh-keygen -t rsa -C “GitHub 邮箱”，然后一路回车。</p>
 <pre><code>ssh-keygen -t rsa -C &quot;2751587017@qq.com&quot;
 </code></pre>
-<p>此时在电脑本地就会生成密钥和公钥，将公钥打开复制<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155748862.png"><br>然后到个人GitHub网站保存这个公钥<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155814089.png"><br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155842398.png"><br><strong>验证链接</strong><br>打开git-bash，输入命令：ssh -T <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a><br>会提示输入yes，回车，出现successful则表示链接成功<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155921415.png"><br>如果出现连接失败，输入命令查看链接过程：<br>ssh -vT <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#109;</a><br>如果出现的是127.0.0.1失败<br>表示dns解析出现了问题<br><strong>解决办法：</strong><br>参考链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7103738143513247781">https://juejin.cn/post/7103738143513247781</a><br>我使用的是steam++加速器，在加速之前，编辑hosts文件，添加以下内容到末尾</p>
+<p>此时在电脑本地就会生成密钥和公钥，将公钥打开复制<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155748862.png"><br>然后到个人GitHub网站保存这个公钥<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155814089.png"><br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155842398.png"><br><strong>验证链接</strong><br>打开git-bash，输入命令：ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#111;&#109;">&#103;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#111;&#109;</a><br>会提示输入yes，回车，出现successful则表示链接成功<br><img src="https://raw.githubusercontent.com/Romantic-1/ImgBed/main/20250425155921415.png"><br>如果出现连接失败，输入命令查看链接过程：<br>ssh -vT <a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#x6f;&#x6d;</a><br>如果出现的是127.0.0.1失败<br>表示dns解析出现了问题<br><strong>解决办法：</strong><br>参考链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7103738143513247781">https://juejin.cn/post/7103738143513247781</a><br>我使用的是steam++加速器，在加速之前，编辑hosts文件，添加以下内容到末尾</p>
 <pre><code>20.205.243.166  github.com
 20.205.243.160  ssh.github.com
 </code></pre>
